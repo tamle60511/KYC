@@ -1,0 +1,39 @@
+server:
+  name: CQS-Approval
+  port: 8080
+  env: developper
+
+
+database:
+  host: 127.0.0.1
+  port: 5432
+  user: root
+  password: 123456
+  name: easyflow
+  timeout: 10
+
+erp_database:
+  host: 192.168.0.200
+  port: 1433
+  user: sa
+  password: dsc@123
+  default_db : DSCSYS
+  timeout: 10
+
+erp_db_mapping:
+  CQS_VN_2025: CQS_VN_2025
+  CQS_TH_2025: CQS_TH_2025
+  TEST_EFNET: TEST_EFNET
+  TEST_ERP: TEST_ERP
+
+jwt:
+  secret: jwt_secret_key
+  expiry_hour: 24
+
+logger:
+  level: info
+  path: "./logs/app.log"
+
+
+signature:
+  signature_key: EFNET_SECRET_KEY
